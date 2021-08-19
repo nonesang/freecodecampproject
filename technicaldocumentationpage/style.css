@@ -1,0 +1,95 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+section {
+    margin-top: 24px;
+}
+
+section > p {
+    margin-top: 16px;
+    margin-left: 16px;
+}
+
+ul {
+    margin-left: 80px;
+}
+
+li > p {
+    margin-top: 16px;
+}
+
+code {
+    display: block;
+    text-align: left;
+    white-space: pre-line;
+    position: relative;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 2;
+    background-color: #f7f7f7;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.docs {
+    display: grid;
+    grid-template-areas: 
+        "menu content"
+    ;
+}
+
+.menu {
+    grid-area: menu;
+    border-right: 3px solid #ccc;
+}
+
+.menu header {
+    font-size: 1.2rem;
+    padding: 24px 32px;
+}
+.nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav > ul {
+    list-style-type: none;
+    margin: 0;
+    height: 80vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.nav > ul > li {
+    padding: 8px 0 8px 24px;
+    border-top: 1px solid #000;
+}
+
+.content {
+    grid-area: content;
+    padding: 32px;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+@media (max-width: 815px) {
+    .docs {
+        grid-template-areas: 
+        'menu'
+        'content';
+    }
+}
